@@ -13,12 +13,12 @@ public class TestSecondReq
     [InlineData(2, 2)]
     public void TestStart(int countVoters, int printExpected)
     {
+        BallotBox instance = new();
         using(var stringWriter = new StringWriter())
         {
             int consoleResponse;
             using(var stringReader = new StringReader(Convert.ToString(printExpected)))
             {
-                BallotBox instance = new();
 
                 Console.SetOut(stringWriter);
                 Console.SetIn(stringReader);

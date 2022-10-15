@@ -28,8 +28,8 @@ namespace election_day
            {
                 Console.WriteLine("Insert a vote:");
                 int readVote;
-                bool isParsed = int.TryParse(Console.ReadLine().ToString(), out readVote);
-                if(isParsed) {
+                bool isParsed = int.TryParse(Console.ReadLine(), out readVote);
+                if(!isParsed) continue;
                     switch (readVote)
                     {
                         case 1:
@@ -45,7 +45,7 @@ namespace election_day
                             optionNull++;
                             break;
                     }
-                }
+                
            }
         }
 
