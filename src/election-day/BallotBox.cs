@@ -24,7 +24,26 @@ namespace election_day
 
         public void Start(int countVoters)
         {
-           throw new NotImplementedException();
+           for (int count = 0; count < countVoters; count++)
+           {
+                Console.WriteLine("Insert a vote:");
+                string? readVote = Console.ReadLine();
+                switch (readVote)
+                {
+                    case "1":
+                        receivedOption1++;
+                        break;
+                    case "2":
+                        receivedOption2++;
+                        break;
+                    case "3":
+                        receivedOption3++;
+                        break;
+                    default:
+                        optionNull++;
+                        break;
+                }
+           }
         }
 
         public void PrintResult()
