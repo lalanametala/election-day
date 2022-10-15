@@ -6,10 +6,20 @@ namespace election_day
         private int receivedOption2;
         private int receivedOption3;
         private int optionNull;
+        private int voters;
         
         public int GetCountVoters()
-        {
-            throw new NotImplementedException();
+        {            
+            bool isParsed;
+
+            do
+            {
+                Console.Write("Insert a valid number of voters:");
+                string? readVoters = Console.ReadLine();
+                isParsed = int.TryParse(readVoters, out voters);
+            } while (!isParsed && voters <= 0);
+
+           return voters;
         }
 
         public void Start(int countVoters)
