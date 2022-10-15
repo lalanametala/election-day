@@ -27,28 +27,37 @@ namespace election_day
            for (int count = 0; count < countVoters; count++)
            {
                 Console.WriteLine("Insert a vote:");
-                string? readVote = Console.ReadLine();
-                switch (readVote)
-                {
-                    case "1":
-                        receivedOption1++;
-                        break;
-                    case "2":
-                        receivedOption2++;
-                        break;
-                    case "3":
-                        receivedOption3++;
-                        break;
-                    default:
-                        optionNull++;
-                        break;
+                int readVote;
+                bool isParsed = int.TryParse(Console.ReadLine().ToString(), out readVote);
+                if(isParsed) {
+                    switch (readVote)
+                    {
+                        case 1:
+                            receivedOption1++;
+                            break;
+                        case 2:
+                            receivedOption2++;
+                            break;
+                        case 3:
+                            receivedOption3++;
+                            break;
+                        default:
+                            optionNull++;
+                            break;
+                    }
                 }
            }
         }
 
         public void PrintResult()
         {
-           throw new NotImplementedException();
+           int[] allVotes = {receivedOption1, receivedOption2, receivedOption3, optionNull};
+
+           for (int index = 0; index < allVotes.Length; index++)
+           {
+                if(index < allVotes.Length - 1) Console.WriteLine("A opção" +(index + 1)+" recebeu: "+allVotes[index]+" voto(s)");
+                else Console.WriteLine("Total de votos anulados: "+allVotes[index]+" voto(s)");
+           }
         }
     }
 }
