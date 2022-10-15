@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.0.0.0",
+        "fileVersion": "4.0.1-1.22181.2 (487283bc)",
+        "semanticVersion": "4.0.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "The field 'BallotBox.receivedOption3' is never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/lalanametala/acelera%C3%A7%C3%A3o-csharp/acc-csharp-09-exercises-election-day/src/election-day/BallotBox.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 21,
+                  "endLine": 7,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "The field 'BallotBox.receivedOption2' is never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/lalanametala/acelera%C3%A7%C3%A3o-csharp/acc-csharp-09-exercises-election-day/src/election-day/BallotBox.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 21,
+                  "endLine": 6,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "The field 'BallotBox.receivedOption1' is never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/lalanametala/acelera%C3%A7%C3%A3o-csharp/acc-csharp-09-exercises-election-day/src/election-day/BallotBox.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 21,
+                  "endLine": 5,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "The field 'BallotBox.optionNull' is never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/lalanametala/acelera%C3%A7%C3%A3o-csharp/acc-csharp-09-exercises-election-day/src/election-day/BallotBox.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 21,
+                  "endLine": 8,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        }
+      ],
+      "rules": {
+        "CS0169": {
+          "id": "CS0169",
+          "shortDescription": "Field is never used",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0169)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
