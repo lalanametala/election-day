@@ -13,6 +13,20 @@ public class TestSecondReq
     [InlineData(2, 2)]
     public void TestStart(int countVoters, int printExpected)
     {
-        throw new NotImplementedException();
+        using(var stringWriter = new StringWriter())
+        {
+            int consoleResponse;
+            using(var stringReader = new StringReader(Convert.ToString(printExpected)))
+            {
+                BallotBox instance = new();
+
+                Console.SetOut(stringWriter);
+                Console.SetIn(stringReader);
+
+                instance.Start(countVoters);
+                consoleResponse = stringWriter.ToString().Trim().Split('\n').Length;
+            }
+            consoleResponse.Should().Be(printExpected);
+        };
     }
 }
